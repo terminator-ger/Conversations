@@ -11,8 +11,8 @@
     <attr name="color_text_primary" format="reference|color" />
     <attr name="color_text_secondary" format="reference|color" />
 
-    <attr name="color_background_secondary" format="reference|color" />
-    <attr name="color_background_primary" format="reference|color" />
+    <attr name="color_background_secondary" format="reference" />
+    <attr name="color_background_primary" format="reference" />
 
     <attr name="infocard_border" format="reference"/>
     <attr name="ic_send_cancel_offline" format="reference"/>
@@ -28,9 +28,12 @@
     <attr name="ic_attach_photo" format="reference"/>
     <attr name="ic_attach_record" format="reference"/>
 
-    <attr name="message_bubble_received_monochrome" format="reference"/>
-    <attr name="message_bubble_sent" format="reference"/>
+    <attr name="message_bubble_received_monochrome" format="color"/>
+    <attr name="message_bubble_sent" format="color"/>
     <attr name="message_bubble_received_green" format="reference"/>
+
+    <attr name="message_text_color_received" format="color|reference"/>
+    <attr name="message_text_color_sent" format="color|reference"/>
 
     <attr name="unread_count" format="reference|color" />
 

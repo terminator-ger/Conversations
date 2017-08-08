@@ -55,9 +55,9 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:longClickable="true"
-                android:textColorLink="@color/white"
-                android:textColor="@color/white"
+                android:textColor="?attr/message_text_color_received"
                 android:textColorHighlight="@color/grey800"
+                android:textColorLink="@color/white"
                 android:textSize="?attr/TextSizeBody" />
 
             <Button
@@ -82,7 +82,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
                     android:layout_marginRight="4sp"
-                    android:textColor="@color/white70"
+                    android:textColor="?attr/message_text_color_received"
                     android:textStyle="bold"
                     android:textSize="?attr/TextSizeInfo" />
 
@@ -113,7 +113,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
                     android:text="@string/sending"
-                    android:textColor="@color/white70"
+                    android:textColor="?attr/message_text_color_received"
                     android:textSize="?attr/TextSizeInfo" />
             </LinearLayout>
         </LinearLayout>

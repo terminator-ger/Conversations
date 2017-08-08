@@ -112,13 +112,13 @@ public class Contact implements ListItem, Blockable {
 	}
 
 	public String getDisplayName() {
-		if (Config.X509_VERIFICATION && this.commonName != null && !this.commonName.isEmpty()) {
+		if (this.commonName != null && Config.X509_VERIFICATION) {
 			return this.commonName;
-		} else if (this.systemName != null && !this.systemName.isEmpty()) {
+		} else if (this.systemName != null) {
 			return this.systemName;
-		} else if (this.serverName != null && !this.serverName.isEmpty()) {
+		} else if (this.serverName != null) {
 			return this.serverName;
-		} else if (this.presenceName != null && !this.presenceName.isEmpty() && mutualPresenceSubscription() ) {
+		} else if (this.presenceName != null && mutualPresenceSubscription()) {
 			return this.presenceName;
 		} else if (jid.hasLocalpart()) {
 			return jid.getUnescapedLocalpart();

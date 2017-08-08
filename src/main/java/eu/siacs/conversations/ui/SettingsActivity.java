@@ -65,10 +65,6 @@ public class SettingsActivity extends XmppActivity implements
 
 		this.mTheme = findTheme();
 		setTheme(this.mTheme);
-
-		int bgcolor = getPrimaryBackgroundColor();
-		getWindow().getDecorView().setBackgroundColor(bgcolor);
-
 	}
 
 	@Override

@@ -28,6 +28,12 @@ import eu.siacs.conversations.xmpp.jid.Jid;
 
 public class UIHelper {
 
+	private static String BLACK_HEART_SUIT = "\u2665";
+	private static String HEAVY_BLACK_HEART_SUIT = "\u2764";
+	private static String WHITE_HEART_SUIT = "\u2661";
+
+	public static final List<String> HEARTS = Arrays.asList(BLACK_HEART_SUIT,HEAVY_BLACK_HEART_SUIT,WHITE_HEART_SUIT);
+
 	private static final List<String> LOCATION_QUESTIONS = Arrays.asList(
 			"where are you", //en
 			"where are you now", //en
@@ -202,7 +208,7 @@ public class UIHelper {
 			if (body.startsWith(Message.ME_COMMAND)) {
 				return new Pair<>(body.replaceAll("^" + Message.ME_COMMAND,
 						UIHelper.getMessageDisplayName(message) + " "), false);
-			} else if (message.isGeoUri()) {
+			} else if (GeoHelper.isGeoUri(message.getBody())) {
 				if (message.getStatus() == Message.STATUS_RECEIVED) {
 					return new Pair<>(context.getString(R.string.received_location), true);
 				} else {

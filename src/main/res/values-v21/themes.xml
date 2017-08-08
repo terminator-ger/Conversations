@@ -2,6 +2,10 @@
 <resources>
 
     <style name="ConversationsTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+
+        <item name="message_text_color_sent">@color/black87</item>
+        <item name="message_text_color_received">@color/black54</item>
+
         <item name="android:colorPrimary">@color/primary500</item>
         <item name="android:colorPrimaryDark">@color/primary700</item>
         <item name="android:colorAccent">@color/accent</item>
@@ -80,6 +84,10 @@
     </style>
 
     <style name="ConversationsTheme.Dark" parent="android:Theme.Material">
+        <item name="message_text_color_sent">@color/white</item>
+        <item name="message_text_color_received">@color/white70</item>
+
+
         <item name="android:colorPrimary">@color/primary800</item>
         <item name="android:colorPrimaryDark">@color/primary900</item>
         <item name="android:colorAccent">@color/accent</item>
@@ -156,5 +164,6 @@
         <item name="attr/icon_notifications_paused">@drawable/ic_notifications_paused_white_24dp</item>
         <item name="attr/icon_notifications_none">@drawable/ic_notifications_none_white_24dp</item>
     </style>
+
 
 </resources>

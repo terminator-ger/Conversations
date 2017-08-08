@@ -56,9 +56,9 @@
                 android:layout_height="wrap_content"
                 android:autoLink="web"
                 android:longClickable="true"
-                android:textColorLink="@color/black87"
-                android:textColor="?attr/color_text_primary"
+                android:textColor="?attr/message_text_color_sent"
                 android:textColorHighlight="@color/grey500"
+                android:textColorLink="@color/black87"
                 android:textSize="?attr/TextSizeBody" />
 
             <Button
@@ -83,7 +83,7 @@
                     android:layout_gravity="center_vertical"
                     android:gravity="center_vertical"
                     android:text="@string/sending"
-                    android:textColor="?attr/color_text_secondary"
+                    android:textColor="?attr/message_text_color_sent"
                     android:textSize="?attr/TextSizeInfo" />
 
                 <ImageView

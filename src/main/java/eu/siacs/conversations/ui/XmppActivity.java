@@ -381,8 +381,12 @@ public abstract class XmppActivity extends Activity {
 		metrics = getResources().getDisplayMetrics();
 		ExceptionHelper.init(getApplicationContext());
 
-		mPrimaryTextColor = ContextCompat.getColor(this, R.color.black87);
-		mSecondaryTextColor = ContextCompat.getColor(this, R.color.black54);
+		int[] attrs = {R.attr.message_text_color_sent};
+		TypedArray ta = getBaseContext().obtainStyledAttributes(attrs);
+		int color = ta.getResourceId(0, android.R.color.black);
+
+		mPrimaryTextColor = ContextCompat.getColor(this, R.color.black);
+		mSecondaryTextColor = ContextCompat.getColor(this, R.color.black);
 		mTertiaryTextColor = ContextCompat.getColor(this, R.color.black12);
 		mColorRed = ContextCompat.getColor(this, R.color.red800);
 		mColorOrange = ContextCompat.getColor(this, R.color.orange500);
@@ -393,8 +397,6 @@ public abstract class XmppActivity extends Activity {
 
 		this.mTheme = findTheme();
 		if(isDarkTheme()) {
-			mPrimaryTextColor = ContextCompat.getColor(this, R.color.white);
-			mSecondaryTextColor = ContextCompat.getColor(this, R.color.white70);
 			mTertiaryTextColor = ContextCompat.getColor(this, R.color.white12);
 			mPrimaryBackgroundColor = ContextCompat.getColor(this, R.color.grey800);
 			mSecondaryBackgroundColor = ContextCompat.getColor(this, R.color.grey900);
@@ -1037,7 +1039,11 @@ public abstract class XmppActivity extends Activity {
 	}
 
 	protected int findTheme() {
+
 		Boolean dark   = getPreferences().getString(SettingsActivity.THEME, getResources().getString(R.string.theme)).equals("dark");
+		Boolean grey   = getPreferences().getString(SettingsActivity.THEME, getResources().getString(R.string.theme)).equals("grey");
+		Boolean light   = getPreferences().getString(SettingsActivity.THEME, getResources().getString(R.string.theme)).equals("light");
+
 		Boolean larger = getPreferences().getBoolean("use_larger_font", getResources().getBoolean(R.bool.use_larger_font));
 
 		if(dark) {
@@ -1045,11 +1051,15 @@ public abstract class XmppActivity extends Activity {
 				return R.style.ConversationsTheme_Dark_LargerText;
 			else
 				return R.style.ConversationsTheme_Dark;
-		} else {
-			if (larger)
-				return R.style.ConversationsTheme_LargerText;
-			else
-				return R.style.ConversationsTheme;
+		}else {
+			if(grey){
+					return R.style.ConversationsTheme_Grey;
+			} else{
+				if(larger)
+					return R.style.ConversationsTheme;
+				else
+					return R.style.ConversationsTheme_LargerText;
+			}
 		}
 	}
 
