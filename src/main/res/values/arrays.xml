@@ -12,11 +12,13 @@
 		<item>@string/pref_theme_light</item>
 		<item>@string/pref_theme_dark</item>
 		<item>@string/pref_theme_grey</item>
+		<item>@string/pref_theme_amoled</item>
 	</string-array>
 	<string-array name="themes_values">
 		<item>light</item>
 		<item>dark</item>
 		<item>grey</item>
+		<item>amoled</item>
 	</string-array>
 	<string-array name="filesizes">
 		<item>@string/never</item>

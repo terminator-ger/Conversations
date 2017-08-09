@@ -387,7 +387,7 @@ public abstract class XmppActivity extends Activity {
 
 		mPrimaryTextColor = ContextCompat.getColor(this, R.color.black);
 		mSecondaryTextColor = ContextCompat.getColor(this, R.color.black);
-		mTertiaryTextColor = ContextCompat.getColor(this, R.color.black12);
+		mTertiaryTextColor = ContextCompat.getColor(this, R.color.white);
 		mColorRed = ContextCompat.getColor(this, R.color.red800);
 		mColorOrange = ContextCompat.getColor(this, R.color.orange500);
 		mColorGreen = ContextCompat.getColor(this, R.color.green500);
@@ -1043,6 +1043,7 @@ public abstract class XmppActivity extends Activity {
 		Boolean dark   = getPreferences().getString(SettingsActivity.THEME, getResources().getString(R.string.theme)).equals("dark");
 		Boolean grey   = getPreferences().getString(SettingsActivity.THEME, getResources().getString(R.string.theme)).equals("grey");
 		Boolean light   = getPreferences().getString(SettingsActivity.THEME, getResources().getString(R.string.theme)).equals("light");
+		Boolean amoled   = getPreferences().getString(SettingsActivity.THEME, getResources().getString(R.string.theme)).equals("amoled");
 
 		Boolean larger = getPreferences().getBoolean("use_larger_font", getResources().getBoolean(R.bool.use_larger_font));
 
@@ -1051,16 +1052,21 @@ public abstract class XmppActivity extends Activity {
 				return R.style.ConversationsTheme_Dark_LargerText;
 			else
 				return R.style.ConversationsTheme_Dark;
-		}else {
-			if(grey){
-					return R.style.ConversationsTheme_Grey;
-			} else{
-				if(larger)
+		}
+		if(grey) {
+			return R.style.ConversationsTheme_Grey;
+		}
+		if(light){
+			if(larger)
 					return R.style.ConversationsTheme;
 				else
 					return R.style.ConversationsTheme_LargerText;
-			}
 		}
+		if(amoled){
+			return R.style.ConversationsTheme_Amoled;
+		}
+
+		return R.style.ConversationsTheme;
 	}
 
 	@Override

@@ -213,15 +213,32 @@
         <item name="attr/color_text_primary">@color/black</item>
         <item name="attr/color_text_secondary">@color/black</item>
 
-        <item name="android:colorPrimary">@color/material_blue_grey_800</item>
-        <item name="android:colorPrimaryDark">@color/material_blue_grey_900</item>
+
         <item name="android:colorForeground">@color/primary_material_dark</item>
         <item name="android:textColorPrimary">@color/white</item>
 
         <item name="attr/message_bubble_received_monochrome">@drawable/message_bubble_received_grey</item>
         <item name="attr/message_bubble_sent">@drawable/message_bubble_sent_grey</item>
         <item name="attr/message_bubble_received_green">@drawable/message_bubble_received_white</item>
+    </style>
+
+    <style name="ConversationsTheme.Amoled" parent="ConversationsTheme.Dark">
+        <item name="attr/color_text_primary">@color/white</item>
+        <item name="attr/color_text_secondary">@color/white</item>
+
+        <item name="attr/message_text_color_sent">@color/white</item>
+        <item name="attr/message_text_color_received">@color/white</item>
+
+        <item name="attr/color_background_primary">@color/black</item>
+        <item name="attr/color_background_secondary">@color/black</item>
+        <item name="android:selectableItemBackground">@color/black</item>
 
 
+        <item name="android:colorBackground">@color/black</item>
+        <item name="android:colorForeground">@color/grey200</item>
+
+        <item name="attr/message_bubble_received_monochrome">@drawable/message_bubble_received_white</item>
+        <item name="attr/message_bubble_sent">@drawable/message_bubble_sent</item>
+        <item name="attr/message_bubble_received_green">@drawable/message_bubble_received_white</item>
     </style>
 </resources>

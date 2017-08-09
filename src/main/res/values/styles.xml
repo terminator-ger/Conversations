@@ -19,19 +19,4 @@
     </style>
 
 
-    <!--<style name="ConversationsTheme.Dark" parent="@android:style/Theme.Holo">-->
-        <!--<item name="attr/message_text_color_sent">@color/white</item>-->
-        <!--<item name="attr/message_text_color_received">@color/white70</item>-->
-    <!--</style>-->
-
-    <!--<style name="ConversationsTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">-->
-        <!--<item name="attr/message_text_color_sent">@color/black87</item>-->
-        <!--<item name="attr/message_text_color_received">@color/black54</item>-->
-    <!--</style>-->
-
-    <!--<style name="ConversationsTheme.Grey" parent="ConversationsTheme.Dark">-->
-        <!--<item name="attr/message_text_color_sent">@color/red800</item>-->
-        <!--<item name="attr/message_text_color_received">@color/white70</item>-->
-    <!--</style>-->
-
 </resources>
